@@ -22,6 +22,8 @@
 
 ![Alt text](imgs/auth-register.png)
 
+![Alt text](imgs/mongo.jpg)
+
 - [x] Login a User & Copy the token from the response
 
 ![Alt text](imgs/auth-login.jpg)
