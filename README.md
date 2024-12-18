@@ -27,6 +27,9 @@
 ![Alt text](imgs/auth-login.jpg)
 
 - [x] Access Protected Product Routes: Method: GET
+- [x] Screenshot the GET request and response.
 
 ![Alt text](imgs/products-token.jpg)
+
+![Alt text](imgs/3000-products.png)
 
