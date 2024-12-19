@@ -70,7 +70,7 @@
 
 ![Alt text](imgs/delete-user.png)
 
-## **POST GET PUT & DELETE Products on Postman**
+## **POST, GET, PUT, & DELETE Products on Postman**
 
 - [x] Post New Product with "Added Successfully Message": Method: POST
 
