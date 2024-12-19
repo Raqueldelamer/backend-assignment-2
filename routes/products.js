@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Router = require("express").Router;
 const Product = require("../models/Product");  // Import the Product model
-const productRoutes = Router();
+// const productRoutes = Router();
 
 // create a new product
 router.post('/', async (req, res) => {
@@ -72,23 +72,22 @@ router.delete('/:id', async (req, res) => {
     }
 });
 
-// Get all products
-productRoutes.get("/", async (req, res) => {
-    try {
-        const products = await Product.find();  // Fetch products
-        res.json({
+// // Get all products
+// productRoutes.get("/", async (req, res) => {
+//     try {
+//         const products = await Product.find();  // Fetch products
+//         res.json({
                 
-                "name": "Oster Classic",
-                "description": "speed blender",
-                "price": 24.99,
-                "category": "blender"
+//                 "name": "Oster Classic",
+//                 "description": "speed blender",
+//                 "price": 24.99,
+//                 "category": "blender"
             
-        });
-    } catch (err) {
-        res.status(500).json({ error: "Failed to fetch products" });
-    }
-});
+//         });
+//     } catch (err) {
+//         res.status(500).json({ error: "Failed to fetch products" });
+//     }
+// });
 
 
-module.exports = productRoutes;
-// module.exports = router;
+module.exports = router;
