@@ -35,9 +35,10 @@
 
 ![Alt text](imgs/3000-products.png)
 
-## **Assignment: Backend - Assignment-3 / Weds Dec 18**
+## **Backend-Assignment-3 / Weds Dec 18**
 
 ## **Objective**
+
 - Add more endpoints to the API
 - Implement CRUD operations for users
 - Refine product endpoints
@@ -46,8 +47,10 @@
 - [x] Step 1: Add More Endpoints to the API
 - [x] Step 2: Refine Product Endpoints
 - [x] Step 3: Handle Errors and Edge Cases
+
 - Create Error Handling Middleware
 - Integrate Error Handling Middleware with the Server
+
 - [x] Step 4: Test the API
 
 ## **Test with Thunder Client or Postman**
