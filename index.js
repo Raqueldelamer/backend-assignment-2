@@ -3,7 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const productRoutes = require('./routes/products');
 const authRoutes = require('./routes/auth');
+const userRoutes = require('./routes/users');
 const auth = require('./middleware/auth');
+const errorHandler = require('./middleware/errorHandler');
 const app = express();
 const port = 3000;
 
@@ -28,12 +30,13 @@ mongoose
     console.error('Error connecting to MongoDB:', error);
 });
 
-// Use the product and auth routes
-app.use('/products', productRoutes);
-app.use('/auth', authRoutes);
-
-// Protect product routes
+// Use the product, auth, and user routes
 app.use('/products', auth, productRoutes);
+app.use('/auth', authRoutes);
+app.use('/users', auth, userRoutes);
+
+// Use the error handling middleware
+app.use(errorHandler);
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
