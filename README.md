@@ -57,7 +57,7 @@
 
 - [x] Get a Single User by ID - Method: GET
 
-![Alt text](imgs/get-user.png)
+![Alt text](imgs/get-by-id.png)
 
 - [x] Update a User by ID: - Method: PUT
 
