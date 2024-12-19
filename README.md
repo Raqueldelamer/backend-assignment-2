@@ -35,7 +35,7 @@
 
 ![Alt text](imgs/3000-products.png)
 
-## **Assignment: Backend - Assignment 3 Dec 18**
+## **Assignment: Backend - Assignment-3 / Weds Dec 18**
 
 ## **Objective**
 - Add more endpoints to the API
