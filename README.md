@@ -35,7 +35,7 @@
 
 ![Alt text](imgs/3000-products.png)
 
-## **Assignment: Backend - Assignment 3**
+## **Assignment: Backend - Assignment 3 Dec 18**
 
 ## **Objective**
 - Add more endpoints to the API
@@ -75,7 +75,7 @@
 
 ![Alt text](imgs/put-product.png)
 
--[x] Delete a Product by ID: Method: DELETE
+- [x] Delete a Product by ID: Method: DELETE
 
 ![Alt text](imgs/delete-product.png)
 
