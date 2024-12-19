@@ -7,14 +7,41 @@ const Product = require("../models/Product");  // Import the Product model
 
 // create a new product
 router.post('/', async (req, res) => {
+    const { name, description, price, category } = req.body;
+
+    if (!name || !description || !price || !category) {
+        return res.status(400).json({ error: "All fields (name, description, price, category) are required." });
+    }
+
     try {
-        const product = new Product(req.body);
-        await product.save();
-        res.status(201).json(product);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
+        // Create a new product 
+        const newProduct = new Product({
+            name,
+            description,
+            price,
+            category,
+        });
+
+        // Save the new product to MongoDB
+        const savedProduct = await newProduct.save();
+
+        // Respond with the saved product
+        res.status(201).json({
+            message: "Product added successfully",
+            product: savedProduct,
+        });
+    } catch (err) {
+        res.status(500).json({ error: "Failed to add product" });
     }
 });
+//     try {
+//         const product = new Product(req.body);
+//         await product.save();
+//         res.status(201).json(product);
+//     } catch (error) {
+//         res.status(400).json({ error: error.message });
+//     }
+// });
 
 // Get all products or filter by category
 router.get('/', async (req, res) => {

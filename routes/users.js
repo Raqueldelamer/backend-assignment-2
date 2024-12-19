@@ -37,7 +37,7 @@ router.put('/:id', auth, async (req, res) => {
     const { name, email, password, role } = req.body;
     const user = await User.findById(req.params.id);
     if (!user) {
-        return res.status(404).json({ error: 'User not found' });
+        return res.status(404).json({ error: 'User ID not found' });
     }
     if (name) user.name = name;
     if (email) user.email = email;
