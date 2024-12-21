@@ -122,7 +122,7 @@
 
 - TEST PRODUCT URL WITH UPLOAD/ MUG IMAGES
 
-- [Alt text](imgs/localhost-krampus.png)
+![Alt text](imgs/localhost-krampus.png)
 
-- [Alt text](imgs/localhost-mug1.png)
+![Alt text](imgs/localhost-mug1.png)
 
