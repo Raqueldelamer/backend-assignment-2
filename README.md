@@ -88,4 +88,24 @@
 
 ![Alt text](imgs/delete-product.png)
 
+## **Assignment: Backend - Assignment 4 - UPLOADS**
+## **Objective**
+- Implement pagination for product listings
+- Add sorting and filtering capabilities
+- Handle file uploads for product images
+
+- [x] Step 1: Implement Pagination for Product Listings
+- [x] Step 2: Handle File Uploads for Product Images
+- Install Multer for File Uploads
+- Set Up Multer Middleware
+- Update Product Routes to Handle File Uploads
+- [x] Step 3: Integrate File Upload Server: Add upload folder to static files on server
+- Update Server Setup
+- [x] Step 4: Test the AP
+
+## **TEST UPLOAD POST & GET PRODUCT APIS**
+
+- POST PRODUCT SUCCESSFULLY
+
+![Alt text](imgs/post-krampus-mug.png)
 

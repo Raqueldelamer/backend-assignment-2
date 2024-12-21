@@ -6,6 +6,7 @@ const authRoutes = require('./routes/auth');
 const userRoutes = require('./routes/users');
 const auth = require('./middleware/auth');
 const errorHandler = require('./middleware/errorHandler');
+const path = require('path');
 const app = express();
 const port = 3000;
 
@@ -13,6 +14,8 @@ const port = 3000;
 app.use(express.json());
 
 require("dotenv").config();
+// Serve static files
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // environment variable connecting to MongoDB
 const MONGO_URL = process.env.MONGO_URL;

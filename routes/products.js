@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 const Router = require("express").Router;
 const Product = require("../models/Product");  // Import the Product model
+const upload = require('../middleware/upload'); // import middleware for product with image upload
 // const productRoutes = Router();
 
 // create a new product
@@ -34,6 +35,26 @@ router.post('/', async (req, res) => {
         res.status(500).json({ error: "Failed to add product" });
     }
 });
+
+// Create a new product with image upload
+router.post('/', upload, async (req, res) => {
+    try {
+        const { name, description, price, category, stock } = req.body;
+        const imageUrl = req.file ? `/uploads/${req.file.filename}` : '';
+        const product = new Product({
+            name,
+            description,
+            price,
+            category,
+            stock,
+            imageUrl,
+    });
+        await product.save();
+        res.status(201).json(product);
+    }   catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+});
 //     try {
 //         const product = new Product(req.body);
 //         await product.save();
@@ -42,6 +63,30 @@ router.post('/', async (req, res) => {
 //         res.status(400).json({ error: error.message });
 //     }
 // });
+
+// Get all products with pagination
+router.get('/', async (req, res) => {
+    try {
+        const {
+            page = 1,
+            limit = 10,
+            category,
+            sortBy,
+            sortOrder = 'asc',
+        } = req.query;
+
+        const filter = category ? { category } : {};
+        const sort = sortBy ? { [sortBy]: sortOrder === 'asc' ? 1 : -1 } : {};
+        const products = await Product.find(filter)
+            .sort(sort)
+            .limit(parseInt(limit))
+            .skip((page - 1) * limit);
+        const total = await Product.countDocuments(filter);
+        res.json({ total, products });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
 
 // Get all products or filter by category
 router.get('/', async (req, res) => {
