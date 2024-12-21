@@ -88,7 +88,8 @@
 
 ![Alt text](imgs/delete-product.png)
 
-## **Assignment: Backend - Assignment 4 - UPLOADS**
+## **Backend - Assignment 4 - HANDLE UPLOADS**
+
 ## **Objective**
 - Implement pagination for product listings
 - Add sorting and filtering capabilities
@@ -121,7 +122,7 @@
 
 - TEST PRODUCT URL WITH UPLOAD/ MUG IMAGES
 
--[Alt text](imgs/localhost-krampus.png)
+- [Alt text](imgs/localhost-krampus.png)
 
--[Alt text](imgs/localhost-mug1.png)
+- [Alt text](imgs/localhost-mug1.png)
 
