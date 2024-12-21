@@ -101,11 +101,27 @@
 - Update Product Routes to Handle File Uploads
 - [x] Step 3: Integrate File Upload Server: Add upload folder to static files on server
 - Update Server Setup
-- [x] Step 4: Test the AP
+- [x] Step 4: Test the Postman API 
 
 ## **TEST UPLOAD POST & GET PRODUCT APIS**
 
 - POST PRODUCT SUCCESSFULLY
 
 ![Alt text](imgs/post-krampus-mug.png)
+
+- GET PRODUCTS SUCCESSFULLY
+
+![Alt text](imgs/get-krampus-mug.png)
+
+![Alt text](imgs/get-holiday-mug.png)
+
+- GET ALL PRODUCTS (UPLOADED MUGS)
+
+![Alt text](imgs/get-all-mugs.png)
+
+- TEST PRODUCT URL WITH UPLOAD/ MUG IMAGES
+
+-[Alt text](imgs/localhost-krampus.png)
+
+-[Alt text](imgs/localhost-mug1.png)
 
